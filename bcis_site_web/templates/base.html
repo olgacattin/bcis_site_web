@@ -1,0 +1,80 @@
+{% load cms_tags menu_tags sekizai_tags %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}This is my new project home page{% endblock title %}</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600,light&v1" >
+        <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/main.css"/>
+        
+        {% render_block "css" %}
+    </head>
+    <body class="backbody">
+        {% cms_toolbar %}
+                <div id="body">
+            <div id="header">
+                <div id="langchoice" class="whitelinks">
+                    <ul>{% language_chooser %}</ul>
+                </div>
+                <div id="logo_1">
+                    <img src="{{ STATIC_URL }}img/logo_bcis.png" alt="Logo du site" id="logo_image_bcis"></img>
+                    
+                    <div id="title_bcis_1">
+                        BCIS
+                    </div>
+                    
+                    <div id="title_bcis_2">
+                        Biodiversity Conservation<br></br>
+                        Information Systems<br clear="all"><br></br>
+                    </div>
+                </div>
+            </div>
+
+            <div id="menu_site"  class="whitelinks">
+                <nav>
+                    <hr class="hr_simple">
+<!--
+                    <div id="logo_home">
+                        <a href="{{ home }}"><img src="{{ STATIC_URL }}img/home.png"  alt="Home" id="icon_home"></img></a>
+                    </div>
+-->
+                    <ul class="menu whitelinks">{% show_menu 0 1 100 100 %}</ul>
+                    <hr class="hr_simple">
+                </nav>
+            </div>
+           
+            <div id="title">
+                 {% placeholder "title_site" %}
+            </div>
+            <hr class="hr_double">
+           
+            <div id="main_content">
+                <div id="left">
+                    {% placeholder "contents"  %}
+                </div>
+
+                <div id="center"></div>
+                
+                <div id="right">
+                    <div id="logo_2">
+                        <img id="logo_image_biodiv" src="{{ STATIC_URL }}img/logo-undb-en.png" alt="Logo" ></img>
+                    </div>
+                    
+                    <hr class="hr_double">
+                    <div id="title_news">News</div>
+                    <hr class="hr_simple">
+                    
+                   {% placeholder "news" %}
+                    
+                </div>
+            </div>
+ 
+            <div id="footer">
+                 <hr class="hr_double">
+                &copy BCIS 2009-2016
+            </div>
+        </div>
+        {% render_block "js" %}
+    </body>
+</html>
