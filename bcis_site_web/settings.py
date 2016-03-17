@@ -126,6 +126,7 @@ INSTALLED_APPS = (
     'djangocms_style',
     'djangocms_column',
     'filer',
+    'captcha',
     'easy_thumbnails',
     'cmsplugin_contact_plus',
     'cmsplugin_filer_image',
