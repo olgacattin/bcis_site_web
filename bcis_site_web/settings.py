@@ -29,7 +29,7 @@ SECRET_KEY = 'htf2gd56uf=r0ueej31__a$jz1my*y=@tm%bh$1vaob5$rl4^y'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 TEMPLATES_DEBUG = DEBUG
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['www.bcis-site-cms.bcis.ch', '.bcis-site.ch']
 
 # Application definition
 
@@ -139,7 +139,8 @@ INSTALLED_APPS = (
     'djangocms_inherit',
     'djangocms_link',
     'reversion',
-    'bcis_site_web'
+    'bcis_site_web',
+    
 )
 
 LANGUAGES = (
@@ -196,11 +197,11 @@ DATABASES = {
     'default': {
         'CONN_MAX_AGE': 0,
         'ENGINE': 'django.db.backends.sqlite3',
-        'HOST': 'localhost',
         'NAME': 'project.db',
         'PASSWORD': '',
+        'USER': '',
         'PORT': '',
-        'USER': ''
+        'HOST': '',
     }
 }
 
@@ -218,3 +219,6 @@ THUMBNAIL_PROCESSORS = (
     'filer.thumbnail_processors.scale_and_crop_with_subject_location',
     'easy_thumbnails.processors.filters'
 )
+
+from local_settings import *
+
