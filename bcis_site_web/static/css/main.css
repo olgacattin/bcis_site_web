@@ -80,7 +80,7 @@ hr.hr_double:after {
     border-bottom: 1px solid #aeccb6;
 }
 
-a:link  /* lien hypertexte */
+a  /* lien hypertexte */
 {
     font-family: 'Open Sans', Arial, sans-serif;
     font-weight: normal;
@@ -89,32 +89,16 @@ a:link  /* lien hypertexte */
     text-align: left;
     height: 37px;
     line-height: 27px;
+}
+
+a:link, a:visited  /* lien hypertexte */
+{
     color: #72ac31;
     text-decoration: none;
 }
 
-a:hover
+a:hover, a:focus, a:active
 {
-    font-family: 'Open Sans', Arial, sans-serif;
-    font-weight: normal;	
-    font-style: normal;
-    font-size: 18px;
-    text-align: left;
-    height: 37px;
-    line-height: 27px;
-    color: #125b30;
-    text-decoration: none;
-}
-
-a:active
-{
-    font-family: 'Open Sans', Arial, sans-serif;
-    font-weight: normal;	
-    font-style: normal;
-    font-size: 18px;
-    text-align: left;
-    height: 37px;
-    line-height: 27px;
     color: #125b30;
     text-decoration: none;
 }
@@ -148,34 +132,20 @@ nav /* liens principaux de navigation */
     text-transform: uppercase;
     text-decoration: none;
 }
-nav:link
+
+nav a
 {
-    font-family: 'Open Sans', Arial, sans-serif;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 17px;
-    text-transform: uppercase;
+    text-decoration: none;
+}
+
+nav a:link, a:visited
+{
     color: #7ba686;
 }
 
-nav:hover
+nav: a:hover, a:focus, a:active
 {
-    font-family: 'Open Sans', Arial, sans-serif;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 17px;
-    text-transform: uppercase;
-    color: #125b30;
-}
-
-nav:active
-{
-    font-family: 'Open Sans', Arial, sans-serif;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 19px;
-    text-transform: uppercase;
-    color: #125b30;
+    color:  #125b30; 
 }
 
 li  /* élément de la liste à puces */
@@ -243,7 +213,7 @@ li  /* élément de la liste à puces */
     display: block;
 }
 
- #langchoice    /* menu de langue */
+.langchoice    /* menu de langue */
 {
     font-family: 'Open Sans', Arial, sans-serif;
     font-weight: normal;
@@ -253,48 +223,50 @@ li  /* élément de la liste à puces */
     list-style: none;
     float: right;
     margin-top: 50px;
+/*
     color: #7ba686;
+*/
 }
 
-#langchoice li
+.langchoice li
 {
     display: inline;
     padding: 10px;
+/*
+    color: #7ba686;
+*/
+}
+
+.langchoice a
+{
+    text-decoration: none;
+}
+
+.langchoice a:link, a:visited
+{
     color: #7ba686;
 }
 
-#langchoice li a:link
+.langchoice a:hover, a:focus, a:active
 {
-    color: #7BA686;
-    text-decoration: none;
+    color: #125b30; 
 }
 
-#langchoice li a:hover
+.langchoice .selector-link a
 {
-    color: #125B30;
-    text-decoration: none;
+    font-weight: bold;
+    color: #125b30; 
 }
 
-#langchoice li a:active
-{
-    color: #125b30;
-    text-decoration: none;
-}
-
-.whitelinks a:link {
+.whitelinks a:link, a:visited {
     color: #7ba686;
     text-decoration: none;
 }
 
-.whitelinks a:hover {
-    color: #125b30;
-    text-decoration: none;
-}
-
-.whitelinks a:active
+.whitelinks a:hover, a:focus, a:active 
 {
     color: #125b30;
-    text-decoration: none; 
+    text-decoration: none;
 }
 
 #menu_site  /* menu principal de la page html */
