@@ -252,13 +252,8 @@ li  /* élément de la liste à puces */
     color: #125b30; 
 }
 
-.langchoice .selector-link a
+.whitelinks a:link, a:visited 
 {
-    font-weight: bold;
-    color: #125b30; 
-}
-
-.whitelinks a:link, a:visited {
     color: #7ba686;
     text-decoration: none;
 }

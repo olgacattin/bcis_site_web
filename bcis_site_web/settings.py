@@ -27,9 +27,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'htf2gd56uf=r0ueej31__a$jz1my*y=@tm%bh$1vaob5$rl4^y'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 TEMPLATES_DEBUG = DEBUG
-ALLOWED_HOSTS = ['www.bcis-site-cms.bcis.ch', '.bcis-site.ch']
+ALLOWED_HOSTS = ['www.bcis-site-cms.bcis.ch', '.bcis-site.bcis.ch']
 
 # Application definition
 
@@ -220,5 +220,5 @@ THUMBNAIL_PROCESSORS = (
     'easy_thumbnails.processors.filters'
 )
 
-#~ from local_settings import *
+from local_settings import *
 
