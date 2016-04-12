@@ -1,6 +1,7 @@
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 STATIC_SERVE = False
+ADMINS = [('Olga', 'olga.cattin@vaubantechnologies.com'), ('Claude', 'claude@2xlibre.net')]
 
 DATABASES = {
     'default': {
